@@ -92,6 +92,12 @@ methodical:
 other:
   # 1. Студенти (бакалаврські / магістерські роботи)
   supervised_students:
+    - student_name: "Компанієць Ілля Віталійович"
+      thesis_title: ""
+      degree_level: "бакалавр"
+    - student_name: "Скуря Катерина Олегівна"
+      thesis_title: ""
+      degree_level: "бакалавр"
     - student_name: "Комаров Кирил Ігорович"
       thesis_title: ""
       degree_level: "магістр"
