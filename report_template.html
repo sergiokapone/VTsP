@@ -553,7 +553,27 @@
     </div>
 
     <div class="section">
-      <div class="section-title">4. Лабораторні заняття / практикуми</div>
+      <div class="section-title">4. Практичні заняття</div>
+      {% set items = methodical.pract_classes | valid_items %}
+      {% if items %}
+        {% for item in items %}
+        <div class="card">
+          <span class="card-num">{{ loop.index }}</span>
+          <div class="card-body">
+            {% if item.course_name %}<div class="row"><span class="label">Назва:</span>         <span class="value">{{ item.course_name }}</span></div>{% endif %}
+            {% if item.faculty %}   <div class="row"><span class="label">Факультет:</span>     <span class="value">{{ item.faculty }}</span></div>{% endif %}
+            {% if item.institute %} <div class="row"><span class="label">Інститут:</span>      <span class="value">{{ item.institute }}</span></div>{% endif %}
+            {% if item.specialty %} <div class="row"><span class="label">Спеціальність:</span> <span class="value">{{ item.specialty }}</span></div>{% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      {% else %}
+        <p class="empty">— відомостей не подано —</p>
+      {% endif %}
+    </div>
+
+    <div class="section">
+      <div class="section-title">5. Лабораторні заняття</div>
       {% set items = methodical.lab_classes | valid_items %}
       {% if items %}
         {% for item in items %}
